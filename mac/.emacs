@@ -22,7 +22,7 @@
 (setq visible-bell t)
 (setq line-number-mode t)		;;;;显示行号
 (setq column-number-mode t)		;;;;显示列号
-(setq-default indent-tabs-mode t)
+(setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 ;(setq scroll-step 1)
 (setq scroll-margin 3
@@ -232,25 +232,25 @@ If ARG is non-numeric, copy line from beginning of the current line."
 
 ;; C/C++/Java mode
 (defun my-c-mode-hook()
-(interactive)
-(c-toggle-auto-state)
-(c-semi&comma-no-newlines-before-nonblanks)
-(c-toggle-hungry-state)
-(imenu-add-menubar-index)
-(which-function-mode t)
-;; gtags mode
-(gtags-mode 1)
-;(smart-operator-mode 1)
-(setq c-macro-shrink-window-flag t)
-(setq c-macro-preprocessor "cpp")
-(setq c-macro-cppflags " ")
-(setq c-macro-prompt-flag t)
-(setq hs-minor-mode t)
-(setq comment-column 48)
-(setq abbrev-mode t)
-;;左侧显示行号, linum.el
-(linum-mode 1)
-)
+  (interactive)
+  (c-toggle-auto-state)
+  (c-semi&comma-no-newlines-before-nonblanks)
+  (c-toggle-hungry-state)
+  (imenu-add-menubar-index)
+  (which-function-mode t)
+  ;; gtags mode
+  (gtags-mode 1)
+										;(smart-operator-mode 1)
+  (setq c-macro-shrink-window-flag t)
+  (setq c-macro-preprocessor "cpp")
+  (setq c-macro-cppflags " ")
+  (setq c-macro-prompt-flag t)
+  (setq hs-minor-mode t)
+  (setq comment-column 48)
+  (setq abbrev-mode t)
+  ;;左侧显示行号, linum.el
+  (linum-mode 1)
+  )
 
 (defun my-c++-mode-hook()
 (interactive)
@@ -303,6 +303,9 @@ If ARG is non-numeric, copy line from beginning of the current line."
         (define-key view-mode-map "j" 'next-line)
         (define-key view-mode-map "k" 'previous-line)))
 
+
+
+(setq auto-mode-alist (cons  '("\\.pat\\'" . nxhtml-mumamo-mode) auto-mode-alist))
 
 ;;plugins
 
