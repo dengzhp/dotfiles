@@ -4,6 +4,8 @@
 (add-to-list 'load-path "~/.emacs.d/plugins")
 (progn (cd "~"))
 
+(load-theme 'tangotango t)
+
 ;;;;苹果键位remap
 (setq mac-command-modifier 'meta) ;映射苹果键
 (setq mac-control-modifier 'control) ;映射Ctrl键
@@ -307,6 +309,21 @@ If ARG is non-numeric, copy line from beginning of the current line."
 
 (setq auto-mode-alist (cons  '("\\.pat\\'" . nxhtml-mumamo-mode) auto-mode-alist))
 
-;;plugins
+(require 'package)
 
+;; list-packages
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
+(package-initialize)
+
+;; exec-path-from-shell: set Emacs' `exec-path' and $PATH from the shell path
+;(require 'exec-path-from-shell)
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
+;;plugins
 (load "~/.emacs.d/load_plugins")

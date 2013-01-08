@@ -1,5 +1,7 @@
 auto-save-list
 vendor/nxhtml/
 ac-comphist.dat
-mac/.emacs.d/tramp
-linux/.emacs.d/tramp
+*/.emacs.d/tramp
+*/.emacs.d/tramp
+*/.emacs.d/var
+*/.emacs.d/url

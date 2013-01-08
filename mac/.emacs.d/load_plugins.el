@@ -1,8 +1,3 @@
-;; color-theme
-(require 'color-theme)
-(color-theme-initialize)
-(color-theme-tangotango)
-
 ;;global
 (autoload 'gtags-mode "gtags" "" t)
 
@@ -28,23 +23,18 @@
  ;;      (define-key gtags-mode-map "\ev" 'gtags-visit-rootdir)
 ))
 
-
-(require 'htmlize)
-
 (add-to-list 'load-path
               "~/.emacs.d/plugins/yasnippet")
 (require 'yasnippet) ;; not yasnippet-bundle
 (yas/global-mode 1)
 
-(require 'browse-kill-ring)
+;(require 'browse-kill-ring)
 (browse-kill-ring-default-keybindings)
 
 ;;google region
 (defun google-region (beg end) "Google the selected region." (interactive "r") (
 browse-url (concat "http://www.google.com/search?ie=utf-8&oe=utf-8&q=" (buffer-substring beg end))))
 (global-set-key (kbd "C-M-g") 'google-region)
-
-(require 'gist)
 
 (load "~/.emacs.d/plugins/nxhtml/autostart")
 
@@ -68,3 +58,9 @@ browse-url (concat "http://www.google.com/search?ie=utf-8&oe=utf-8&q=" (buffer-s
 )
 
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
+
+
+(add-to-list 'load-path
+              "~/.emacs.d/plugins/weibo.emacs")
+
+(require 'weibo)
