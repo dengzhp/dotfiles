@@ -23,9 +23,6 @@
  ;;      (define-key gtags-mode-map "\ev" 'gtags-visit-rootdir)
 ))
 
-(require 'yasnippet) ;; not yasnippet-bundle
-(yas/global-mode 1)
-
 ;(require 'browse-kill-ring)
 (browse-kill-ring-default-keybindings)
 
@@ -39,11 +36,8 @@ browse-url (concat "http://www.google.com/search?ie=utf-8&oe=utf-8&q=" (buffer-s
 ;; MIT Scheme
 (setenv "MITSCHEME_LIBRARY_PATH"  "/Applications/mit-scheme.app/Contents/Resources")
 
-
 ;;auto-complete
-(add-to-list 'load-path "~/.emacs.d/plugins/auto-complete")
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/plugins/auto-complete/ac-dict")
 (ac-config-default)
 
 ;; auto-complete-clang
