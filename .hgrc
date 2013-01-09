@@ -10,6 +10,8 @@ graphlog =
 transplant =
 hgk =
 color = 
+hgext.bookmarks =
+hggit = 
 
 
 [diff]
