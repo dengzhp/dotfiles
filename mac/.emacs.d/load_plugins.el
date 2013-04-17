@@ -31,7 +31,7 @@
 browse-url (concat "http://www.google.com/search?ie=utf-8&oe=utf-8&q=" (buffer-substring beg end))))
 (global-set-key (kbd "C-M-g") 'google-region)
 
-(load "~/.emacs.d/plugins/nxhtml/autostart")
+;;(load "~/.emacs.d/plugins/nxhtml/autostart")
 
 ;; MIT Scheme
 (setenv "MITSCHEME_LIBRARY_PATH"  "/Applications/mit-scheme.app/Contents/Resources")
@@ -52,7 +52,7 @@ browse-url (concat "http://www.google.com/search?ie=utf-8&oe=utf-8&q=" (buffer-s
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
 
 
-(add-to-list 'load-path
-              "~/.emacs.d/plugins/weibo.emacs")
+;(add-to-list 'load-path
+;              "~/.emacs.d/plugins/weibo.emacs")
 
-(require 'weibo)
+;(require 'weibo)
