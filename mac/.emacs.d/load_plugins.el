@@ -23,11 +23,6 @@
  ;;      (define-key gtags-mode-map "\ev" 'gtags-visit-rootdir)
 ))
 
-(add-to-list 'load-path
-              "~/.emacs.d/plugins/yasnippet")
-(require 'yasnippet) ;; not yasnippet-bundle
-(yas/global-mode 1)
-
 ;(require 'browse-kill-ring)
 (browse-kill-ring-default-keybindings)
 
@@ -36,16 +31,13 @@
 browse-url (concat "http://www.google.com/search?ie=utf-8&oe=utf-8&q=" (buffer-substring beg end))))
 (global-set-key (kbd "C-M-g") 'google-region)
 
-(load "~/.emacs.d/plugins/nxhtml/autostart")
+;;(load "~/.emacs.d/plugins/nxhtml/autostart")
 
 ;; MIT Scheme
 (setenv "MITSCHEME_LIBRARY_PATH"  "/Applications/mit-scheme.app/Contents/Resources")
 
-
 ;;auto-complete
-(add-to-list 'load-path "~/.emacs.d/plugins/auto-complete")
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/plugins/auto-complete/ac-dict")
 (ac-config-default)
 
 ;; auto-complete-clang
@@ -60,7 +52,7 @@ browse-url (concat "http://www.google.com/search?ie=utf-8&oe=utf-8&q=" (buffer-s
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
 
 
-(add-to-list 'load-path
-              "~/.emacs.d/plugins/weibo.emacs")
+;(add-to-list 'load-path
+;              "~/.emacs.d/plugins/weibo.emacs")
 
-(require 'weibo)
+;(require 'weibo)

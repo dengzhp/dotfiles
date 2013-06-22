@@ -107,9 +107,19 @@ If the new path's directories does not exist, create them."
      (remove 'process-kill-buffer-query-function kill-buffer-query-functions))
 
 
+
 ;;My keys binding
 
-(global-set-key (kbd "C-M-f") 'ns-toggle-fullscreen)
+(defun toggle-fullscreen ()
+  "Toggle full screen"
+  (interactive)
+  (set-frame-parameter
+     nil 'fullscreen
+     (when (not (frame-parameter nil 'fullscreen)) 'fullboth)))
+
+
+(global-set-key (kbd "C-M-f") 'toggle-fullscreen)
+
 (global-set-key (kbd "A-SPC") 'just-one-space)
 
 ;;Genral purpose

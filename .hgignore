@@ -1,0 +1,13 @@
+syntax: glob
+auto-save-list
+vendor/nxhtml/
+vendor/weibo.emacs/
+ac-comphist.dat
+*/.emacs.d/tramp
+*/.emacs.d/tramp
+*/.emacs.d/var
+*/.emacs.d/url
+
+syntax: regexp
+
+.elc$

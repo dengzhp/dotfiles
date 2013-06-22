@@ -1,7 +1,6 @@
 [ui]
 username = freestyler <dengzhiping@corp.netease.com>
 
-
 [extensions]
 children =
 rebase = 
@@ -12,6 +11,7 @@ hgk =
 color = 
 hgext.bookmarks =
 hggit = 
+pager = 
 
 
 [diff]
@@ -26,3 +26,6 @@ status.deleted = cyan bold
 status.unknown = blue bold
 status.ignored = black bold
 
+
+[pager]
+pager = LESS='FRX' less
