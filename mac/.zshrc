@@ -28,7 +28,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 unsetopt correct_all
-export PATH=~/bin:/usr/local/bin:/bin:/usr/sbin:/sbin:/usr/bin:/usr/X11/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Users/freestyler/hg/go/bin
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/bin:/usr/sbin:/sbin:/usr/bin:/usr/X11/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Users/freestyler/hg/go/bin
 
 alias ssh3='ssh -p32200'
 alias ec="emacsclient -n"
@@ -39,3 +39,6 @@ export EDITOR=vim
 export LC_ALL="en_US.UTF-8"
 
 export PYTHONSTARTUP=~/.pythonrc
+
+alias igordevenv='export IGOR_API_URL="https://m.igor-dev.163.com/api" IGOR_HOME="~/.igor.dev/"'
+alias igorenv='unset IGOR_API_URL IGOR_HOME'
