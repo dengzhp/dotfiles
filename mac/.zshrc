@@ -40,3 +40,6 @@ export EDITOR=vim
 export LC_ALL="en_US.UTF-8"
 
 export PYTHONSTARTUP=~/.pythonrc
+
+alias igordevenv='export IGOR_API_URL="https://m.igor-dev.163.com/api" IGOR_HOME="~/.igor.dev/"'
+alias igorenv='unset IGOR_API_URL IGOR_HOME'
