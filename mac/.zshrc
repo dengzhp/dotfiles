@@ -27,12 +27,13 @@ plugins=(git svn osx brew)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-unsetopt correct_all
+unsetopt correct
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/bin:/usr/sbin:/sbin:/usr/bin:/usr/X11/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Users/freestyler/hg/go/bin
 
 alias ssh3='ssh -p32200'
 alias ec="emacsclient -n"
 alias la='ls -a'
+alias ossh='/usr/local/other/bin/ssh -Zfuckgfw999'
 
 export EDITOR=vim
 
