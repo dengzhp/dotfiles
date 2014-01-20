@@ -34,6 +34,7 @@ alias ssh3='ssh -p32200'
 alias ec="emacsclient -n"
 alias la='ls -a'
 alias ossh='/usr/local/other/bin/ssh -Zfuckgfw999'
+alias fssh='/usr/local/other/bin/ssh -Zgist.github.com'
 
 export EDITOR=vim
 
@@ -41,5 +42,4 @@ export LC_ALL="en_US.UTF-8"
 
 export PYTHONSTARTUP=~/.pythonrc
 
-alias igordevenv='export IGOR_API_URL="https://m.igor-dev.163.com/api" IGOR_HOME="~/.igor.dev/"'
-alias igorenv='unset IGOR_API_URL IGOR_HOME'
+ssh-add ~/.ssh/id_rsa  &>/dev/null
