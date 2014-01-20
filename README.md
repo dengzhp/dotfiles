@@ -59,3 +59,10 @@ ln -s /path/to/dotfiles/linux/.zshrc ~/.zshrc
 ```
 ln -s /path/to/dotfiles/.vimrc ~/.vimrc
 ```
+
+.gitconfig
+-----------
+
+```
+ln -s /path/to/dotfiles/.gitconfig ~/.gitconfig
+```
